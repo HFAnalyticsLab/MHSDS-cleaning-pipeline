@@ -1,3 +1,5 @@
+<img src="ndlbanner.png" width="405" height="96">
+
 # Mental Health Services Dataset (MHSDS) cleaning pipeline
 
 #### Project Status: Completed
