@@ -123,7 +123,7 @@ Describe the way in which the code can be used.
 
 ## License
 
-This project is licensed under the [MIT License](link to license file).
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
