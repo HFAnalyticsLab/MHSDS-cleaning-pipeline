@@ -123,4 +123,4 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-We would like to aknowledge our colleagues in the Leeds and Liverpool CCGs who helped produce this cleaning and processing pipeline.
+We would like to acknowledge our colleagues in the Leeds and Liverpool CCGs who helped produce this cleaning and processing pipeline.
