@@ -6,11 +6,11 @@
 
 ## Project Description
 
-- background
-- aim of the project
-- what does the code in this repo do?
-- main methods
-- links to any outputs, blogs. 
+- The [Networked Data Lab](https://www.health.org.uk/funding-and-partnerships/our-partnerships/the-networked-data-lab)'s second research topic is children and young people's mental health. In order to carry out analyses on this topic, several of our analytical partners requested access to NHS Digital's Mental Health Services Dataset (MHSDS).
+
+- It is a patient level, output based, secondary uses dataset which aims to deliver robust, comprehensive, nationally consistent and comparable person-based information for children, young people and adults who are in contact with services for mental health and wellbeing, Learning Disability, autism or other  neurodevelopmental conditions. It covers services located in England (or located outside England but treating patients commissioned by an English CCG) and any services which are at least partly funded by the NHS are within the remit of this dataset. Contacts with IAPT (the psychological therapies service) are not included.
+
+- This dataset relies on a complex [data model](https://files.digital.nhs.uk/8B/1307C5/MHSDS%20_Analysis_Webinar_20190925.pdf). It included over 50 tables, and getting started with MHSDS can be daunting. To make things easier for other teams trying to use this data, we have shared the SQL codes used by two of our Networked Data Lab partners to process this data (Leeds and Liverpool/Wirral).
 
 ## Data source
 
@@ -79,20 +79,31 @@ MHSDS contains over 50 tables, but the code only processes and cleans those high
 - MHS804 FiveForensicPathways
 - MHS901 StaffDetails
 
-Describe data sources, inlcluding links to public data or references to data sharing agreements. 
-
 ## How does it work?
 
-What you need to do to reproduce the analysis or re-use the code on your local machine.  
+There are multiple versions of MHSDS, with version 5 being the most recent one at the time of this work. New versions are released when the collection methodology changes, mistakes need to be corrected or variables are added. It’s not unusual, especially if you are working with patient-level data going back years, to have to work simultaneously with multiple versions of MHSDS. This can cause some issues that we list below. 
+
+- Each version of MHSDS comes with its own bridging file. These are the files that allow you to join-up MHSDS with other datasets using unique patient identifiers. If a patient has different identifiers (one per version) then they may end up looking like different people in the appended version.
+
+- Patient identifiers changed from fiscal year 2021/21 onwards, causing similar double-counting issues. 
+
+- Some older data points are now marked as ‘non-valid'. Up until the end fiscal year 2019/20, some rows from older versions of MHSDS are marked as ‘non-valid’ using a specific submission flag in the data. It could be named *‘IC_USE_Submission_Flag’*, *‘z_SubmissionFlag’* or other depending on how you received this data and how it’s been pre-processed (for example by the DSCRO or a Commissioning Support Unit). 
+
+- Referrals get re-submitted each month as long as they are open, causing more duplicates. This needs to be accounted for in the code, otherwise it may appear like a single patient has dozens or more active referrals. 
+
+- Other referrals are duplicated, on the basis that they are relevant to more than one CCG. Again, there should be a specific flag in your data showing which duplicate referrals need to be removed.
+
+The codes we have published here address those issues by:
+
+- Merging all versions into a single view.
+- Picking the latest record (e.g. of referrals) where there is a duplicate.
+- Including the pseudo-NHS-number where there is one.
+
+There is one SQL code to process each table. For example, *latest-care-contact.SQL* creates a clean view for table *MHS201 CareContact*.
 
 ### Requirements
 
-Software or packages that needs to be installed and and how to install them.
-
-For example:
-These scripts were written in R version (to be added) and RStudio Version 1.1.383. 
-The following R packages (available on CRAN) are needed: 
-* [**tidyverse**](https://www.tidyverse.org/)
+These codes require that you have an SQL-supported database management software, such as SQL Server Management Studio.
 
 ### Getting started
 
@@ -108,6 +119,7 @@ Describe the way in which the code can be used.
 
 - Souheila Fox, Leeds CCG ([e-mail](souheila.fox@nhs.net))
 - Roberta Piroddi, Liverpool CCG ([e-mail](roberta.piroddi@liverpoolccg.nhs.uk))
+- Karen Jones, Liverpool CCG
 
 ## License
 
@@ -115,6 +127,4 @@ This project is licensed under the [MIT License](link to license file).
 
 ## Acknowledgments
 
-* Credit anyone whose code was used
-* Inspiration
-* etc
+We would like to aknowledge our colleagues in the Leeds and Liverpool CCGs who helped produce this cleaning and processing pipeline.
