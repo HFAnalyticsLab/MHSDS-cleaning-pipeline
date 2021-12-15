@@ -105,10 +105,6 @@ There is one SQL code to process each table. For example, *latest-care-contact.S
 
 These codes require that you have an SQL-supported database management software, such as SQL Server Management Studio.
 
-### Getting started
-
-Describe the way in which the code can be used. 
-
 ## Useful references
 
 - [MHSDS metadata](https://nhs-prod.global.ssl.fastly.net/binaries/content/assets/website-assets/isce/dcb0011/0011292020datasetspec-v1.1.xlsm)
