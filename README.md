@@ -10,7 +10,7 @@
 
 - It is a patient level, output based, secondary uses dataset which aims to deliver robust, comprehensive, nationally consistent and comparable person-based information for children, young people and adults who are in contact with services for mental health and wellbeing, Learning Disability, autism or other  neurodevelopmental conditions. It covers services located in England (or located outside England but treating patients commissioned by an English CCG) and any services which are at least partly funded by the NHS are within the remit of this dataset. Contacts with IAPT (the psychological therapies service) are not included.
 
-- This dataset relies on a complex [data model](https://files.digital.nhs.uk/8B/1307C5/MHSDS%20_Analysis_Webinar_20190925.pdf). It included over 50 tables, and getting started with MHSDS can be daunting. To make things easier for other teams trying to use this data, we have shared the SQL codes used by two of our Networked Data Lab partners to process this data (Leeds and Liverpool/Wirral).
+- This dataset relies on a complex [data model](https://files.digital.nhs.uk/8B/1307C5/MHSDS%20_Analysis_Webinar_20190925.pdf). It includes over 50 tables, and getting started with MHSDS can be daunting. To make things easier for other teams trying to use this data, we have shared the SQL codes used by two of our Networked Data Lab partners to process this data (Leeds and Liverpool/Wirral).
 
 ## Data source
 
