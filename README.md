@@ -113,9 +113,9 @@ These codes require that you have an SQL-supported database management software,
 
 ## Authors
 
-- Souheila Fox, Leeds CCG ([e-mail](souheila.fox@nhs.net))
-- Roberta Piroddi, Liverpool CCG ([e-mail](roberta.piroddi@liverpoolccg.nhs.uk))
-- Karen Jones, Liverpool CCG
+- Souheila Fox, Leeds CCG ([e-mail](souheila.fox@nhs.net)) for Leeds codes
+- Roberta Piroddi, Liverpool CCG ([e-mail](roberta.piroddi@liverpoolccg.nhs.uk)) for Liverpool and Wirral codes
+- Karen Jones, Liverpool CCG for Liverpool and Wirral codes
 
 ## License
 
@@ -123,4 +123,4 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-We would like to acknowledge our colleagues in the Leeds and Liverpool CCGs who helped produce this cleaning and processing pipeline.
+We would like to thank our colleagues in the Leeds and Liverpool CCGs who produced this cleaning and processing pipeline, and made it available to the public.
