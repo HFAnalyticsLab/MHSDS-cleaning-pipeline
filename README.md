@@ -113,8 +113,8 @@ These codes require that you have an SQL-supported database management software,
 
 ## Authors
 
-- Souheila Fox, Leeds CCG ([e-mail](souheila.fox@nhs.net)) for Leeds codes
-- Roberta Piroddi, Liverpool CCG ([e-mail](roberta.piroddi@liverpoolccg.nhs.uk)) for Liverpool and Wirral codes
+- Souheila Fox, Leeds CCG ([e-mail](mailto:souheila.fox@nhs.net)) for Leeds codes
+- Roberta Piroddi, Liverpool CCG ([e-mail](mailto:roberta.piroddi@liverpoolccg.nhs.uk)) for Liverpool and Wirral codes
 - Karen Jones, Liverpool CCG for Liverpool and Wirral codes
 
 ## License
